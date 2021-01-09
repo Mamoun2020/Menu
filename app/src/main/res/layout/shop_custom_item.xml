@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:id="@+id/shop_constrain_item">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/shop_card_meal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/_8sdp"
+        android:padding="@dimen/_2sdp"
+        app:cardBackgroundColor="#EAEAEA"
+        app:cardCornerRadius="@dimen/_10sdp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:id="@+id/item_iv_shopmeal"
+            android:layout_width="@dimen/_124sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/item_tv_shopnamemeal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="Text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:fontFamily="@font/cairobold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_iv_shopmeal"
+            android:shadowColor="#3D955901"
+            android:shadowDy="4"
+            android:shadowRadius="3"/>
+
+        <TextView
+            android:id="@+id/item_tv_shopcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="10000"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="normal"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:textAlignment="gravity"
+            android:fontFamily="@font/cairoregular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_tv_shopnamemeal" />
+
+        <TextView
+            android:id="@+id/item_tv_shopprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/cairobold"
+            android:shadowColor="#3D955901"
+            android:shadowDy="4"
+            android:shadowRadius="3"
+            android:text="10000"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/item_tv_shopcount"
+            app:layout_constraintTop_toBottomOf="@+id/item_tv_shopcount" />
+
+
+        <TextView
+            android:id="@+id/item_tv_shopcurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4sdp"
+            android:layout_marginStart="28dp"
+            android:fontFamily="@font/cairoblack"
+            android:shadowColor="#3D955901"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:text="@string/meals_price"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/item_tv_shopprice"
+            app:layout_constraintStart_toEndOf="@+id/item_tv_shopprice"
+            app:layout_constraintTop_toTopOf="@+id/item_tv_shopprice"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

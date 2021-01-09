@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Menu</string>
+    <!--    login activity-->
+    <string name="login_tv_title">Login</string>
+    <string name="login_et_username">User Name</string>
+    <string name="login_et_password">Password</string>
+    <string name="login_tv_remember">Remember me</string>
+    <string name="login_tv_forget">Forget Password?</string>
+    <string name="login_btn_login">Log In</string>
+    <string name="login_tv_haveacc">"Already haven't Account?"</string>
+    <string name="login_tv_signup">Sign Up</string>
+    <string name="login_tv_error">Login failed.Invalid username or password.</string>
+    <!--    signup activity-->
+    <string name="signup_tv_title">Sign Up</string>
+    <string name="signup_et_username">Enter User Name</string>
+    <string name="signup_et_phone">Enter Your Phone Number</string>
+    <string name="signup_et_password">Enter Your Password</string>
+    <string name="signup_et_address">Enter Your Address</string>
+    <string name="signup_btn_signup">Sign Up</string>
+    <string name="signup_tv_haveacc">Have you Account?</string>
+    <string name="signup_tv_login">Log In</string>
+    <string name="signup_tv_result1">Success Sign Up</string>
+    <string name="signup_tv_result2">Enter Your Information</string>
+    <string name="signup_tv_result3">The Entry is Wrong</string>
+    <!--    forget activity-->
+    <string name="forget_tv_title">Reset a Password</string>
+    <string name="forget_et_username">User Name</string>
+    <string name="forget_et_password">Enter New Password</string>
+    <string name="forget_et_conpassword">Confirm the new Password</string>
+    <string name="forget_btn_ok">OK</string>
+    <string name="forget_tv_error1">"Password doesn't match"</string>
+    <string name="forget_tv_msg">The Password has been reset successfully</string>
+    <string name="forget_tv_error2">User Not Found</string>
+    <!--    main activity-->
+    <string name="main_message_dialog">Do you want to exit the app?</string>
+    <string name="main_title_dialog">Exit</string>
+    <string name="main_yes_dialog">Yes</string>
+    <string name="main_no_dialog">No</string>
+    <string name="main_tabitem_menu">Meals</string>
+    <string name="main_tabitem_drinks">Drinks</string>
+    <string name="main_tabitem_buy">Shopping Basket</string>
+
+    <string name="Meals_Name1">Burger</string>
+    <string name="Meals_component1">This meal consists of bread,tomato,lettuce,pickles,Hamburger meat,cheese,onion,ketchup,mayonnaise and bread.</string>
+    <string name="Meals_Name2">Shawarma_Lamb</string>
+    <string name="Meals_component2">This meal is sandwich consist of meat from lamb,salad,ketchup and some pickles.</string>
+    <string name="meals_price">Shekel</string>
+    <string name="meals_btn_buy">Buy</string>
+    <string name="Meals_Name3">Pizza</string>
+    <string name="Meals_component3">This meal consists of pizza pie, tomatoes, ketchup, olives, cheese, potatoes and sliced meat.</string>
+    <string-array name="meals_spinner_count">
+        <item>Enter a count</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+
+</resources>

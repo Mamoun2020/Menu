@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Menu</string>
+                <!--    login activity-->
+    <string name="login_tv_title">تسجيل الدخول</string>
+    <string name="login_et_username">اسم المستخدم</string>
+    <string name="login_et_password">كلمة السر</string>
+    <string name="login_tv_remember">تذكرني</string>
+    <string name="login_tv_forget">نسيت كلمة السر؟</string>
+    <string name="login_btn_login">تسجيل دخول</string>
+    <string name="login_tv_haveacc">لا تمتلك حساب ؟</string>
+    <string name="login_tv_signup">تسجيل</string>
+    <string name="login_tv_error">فشل تسجيل الدخول.اسم المستخدم أو كلمة السر غير صحيحة</string>
+                        <!--    signup activity-->
+    <string name="signup_tv_title">تسجيل</string>
+    <string name="signup_et_username">ادخل اسم المستخدم</string>
+    <string name="signup_et_phone">ادخل رقم هاتفك</string>
+    <string name="signup_et_password">ادخل رقمك السري</string>
+    <string name="signup_et_address">ادخل عنوانك</string>
+    <string name="signup_btn_signup">تسجيل</string>
+    <string name="signup_tv_haveacc">هل تمتلك حساب؟</string>
+    <string name="signup_tv_login">تسجيل الدخول</string>
+    <string name="signup_tv_result1">تم التسجيل بنجاح</string>
+    <string name="signup_tv_result2">قم بإدخال بياناتك</string>
+    <string name="signup_tv_result3">الإدخال خاطئ</string>
+                       <!--    forget activity-->
+    <string name="forget_tv_title">اعادة تعيين كلمة المرور</string>
+    <string name="forget_et_username">اسم المستخدم</string>
+    <string name="forget_et_password">تعيين كلمة سر جديدة</string>
+    <string name="forget_et_conpassword">تأكيد كلمة سر الجديدة</string>
+    <string name="forget_btn_ok">تم</string>
+    <string name="forget_tv_error1">كلمة السر غير متطابقة</string>
+    <string name="forget_tv_msg">تم إعادة تعيين كلمة السر بنجاح</string>
+    <string name="forget_tv_error2">المستخدم غير موجود</string>
+                        <!--    main activity-->
+    <string name="main_message_dialog">هل تود الخروج من التطبيق؟</string>
+    <string name="main_title_dialog">خروج</string>
+    <string name="main_yes_dialog">نعم</string>
+    <string name="main_no_dialog">لا</string>
+    <string name="main_tabitem_menu">الوجبات</string>
+    <string name="main_tabitem_drinks">مشروبات</string>
+    <string name="main_tabitem_buy">سلة المشتريات</string>
+
+    <string name="Meals_Name1">هامبورجر</string>
+    <string name="Meals_component1">تتكون هذه الوجبة من خبز، طماطم، خس، مخلل، لحم هامبورجر، جبن، بصل، كاتشب، مايونيز و خبز.</string>
+    <string name="Meals_Name2">شورما_ضأن</string>
+    <string name="Meals_component2">تتكون هذه الوجبة من فطيرة لحم الضأن، السلطة، الكاتشب وبعض المخللات.</string>
+    <string name="meals_price">شيكل</string>
+    <string name="meals_btn_buy">شراء</string>
+    <string name="Meals_Name3">بيتزا</string>
+    <string name="Meals_component3">تتكون هذه الوجبة من فطيرة البيتزا، الطماطم، كاتشب، زيتون، جبنة، بطاطا وشرائح اللحمة.</string>
+    <string-array name="meals_spinner_count">
+        <item>ادخل الكمية</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+</resources>

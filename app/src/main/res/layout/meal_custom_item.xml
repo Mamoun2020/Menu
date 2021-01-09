@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:id="@+id/constrain_item">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_meal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/_8sdp"
+        android:padding="@dimen/_2sdp"
+        app:cardBackgroundColor="#EAEAEA"
+        app:cardCornerRadius="@dimen/_10sdp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:id="@+id/item_iv_meal"
+            android:layout_width="@dimen/_124sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/item_tv_namemeal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="Text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:fontFamily="@font/cairobold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_iv_meal"
+            android:shadowColor="#3D955901"
+            android:shadowDy="4"
+            android:shadowRadius="3"/>
+
+        <TextView
+            android:id="@+id/item_tv_components"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="10000"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="normal"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:textAlignment="gravity"
+            android:fontFamily="@font/cairoregular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_tv_namemeal" />
+
+        <TextView
+            android:id="@+id/item_tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:fontFamily="@font/cairobold"
+            android:shadowColor="#3D955901"
+            android:shadowDy="4"
+            android:shadowRadius="3"
+            android:text="10000"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/item_btn_tobuy"
+            app:layout_constraintTop_toBottomOf="@+id/item_tv_components" />
+
+        <TextView
+            android:id="@+id/item_tv_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4sdp"
+            android:fontFamily="@font/cairoblack"
+            android:shadowColor="#3D955901"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:text="@string/meals_price"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/item_tv_price"
+            app:layout_constraintStart_toEndOf="@+id/item_tv_price"
+            app:layout_constraintTop_toTopOf="@+id/item_tv_price" />
+
+
+        <Button
+            android:id="@+id/item_btn_tobuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:backgroundTint="#FF9800"
+            android:fontFamily="@font/cairobold"
+            android:padding="@dimen/_2sdp"
+            android:shadowColor="#3D955901"
+            android:shadowDy="4"
+            android:shadowRadius="3"
+            android:text="@string/meals_btn_buy"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/item_tv_price"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_tv_components"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_1sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/item_tv_currency"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_tv_currency"
+            app:layout_constraintTop_toTopOf="@+id/item_tv_currency">
+
+            <Button
+                android:id="@+id/item_btn_minus"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#FF9800"
+                android:fontFamily="@font/cairobold"
+                android:padding="@dimen/_1sdp"
+                android:shadowColor="#3D955901"
+                android:shadowDy="4"
+                android:shadowRadius="3"
+                android:text="-" />
+
+            <EditText
+                android:id="@+id/item_et_count"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:ems="3"
+                android:gravity="center"
+                android:inputType="number"
+                android:singleLine="true"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/item_btn_plus"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#FF9800"
+                android:fontFamily="@font/cairobold"
+                android:padding="@dimen/_1sdp"
+                android:shadowColor="#3D955901"
+                android:shadowDy="4"
+                android:shadowRadius="3"
+                android:text="+" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
