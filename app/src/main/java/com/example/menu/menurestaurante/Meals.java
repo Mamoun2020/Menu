@@ -5,12 +5,14 @@ public class Meals {
     String components;
     double price;
     int img_meal;
+    int count;
 
-    public Meals(String name_Meal, String components, double price, int img_meal) {
+    public Meals(String name_Meal, String components, double price, int img_meal,int count) {
         Name_Meal = name_Meal;
         this.components = components;
         this.price = price;
         this.img_meal = img_meal;
+        this.count=count;
     }
 
     public Meals() {
@@ -48,4 +50,12 @@ public class Meals {
     public void setImg_meal(int img_meal) {
         this.img_meal = img_meal;
     }
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
 }

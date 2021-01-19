@@ -22,16 +22,14 @@ public class FragmentDrinks extends Fragment {
     }
 
 
-    RecyclerView recycler;
-    View view;
-    ConstraintLayout rootlayout;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view= inflater.inflate(R.layout.fragment_drinks, container, false);
-        recycler=view.findViewById(R.id.main_recycler_drinks);
-        rootlayout = view.findViewById(R.id.drinks_rootlayout);
+        View view= inflater.inflate(R.layout.fragment_drinks, container, false);
+        RecyclerView recycler=view.findViewById(R.id.main_recycler_drinks);
+
         recycler.setLayoutManager(new LinearLayoutManager(getActivity()));
         recycler.setRotationY(180);
         return view;

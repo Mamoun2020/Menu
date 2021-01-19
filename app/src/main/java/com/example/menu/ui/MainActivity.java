@@ -25,12 +25,14 @@ import com.example.menu.database.Account;
 import com.example.menu.database.AccountDataBase;
 import com.example.menu.database.CartDataBase;
 import com.example.menu.database.CartMeal;
+import com.example.menu.menurestaurante.AdapterMeals;
 import com.example.menu.menurestaurante.FragmentDrinks;
 import com.example.menu.menurestaurante.FragmentMealsType;
 import com.example.menu.menurestaurante.FragmentShoping;
 import com.example.menu.menurestaurante.ItemTab;
 import com.example.menu.menurestaurante.MainTab;
 import com.example.menu.menurestaurante.Meals;
+import com.example.menu.menurestaurante.OnItemClickListener;
 import com.example.menu.menurestaurante.PagerAdapter;
 import com.example.menu.menurestaurante.ShopingMeals;
 import com.google.android.material.tabs.TabItem;
@@ -101,32 +103,11 @@ public class MainActivity extends AppCompatActivity implements FragmentMealsType
     }
 
     //هان صارت المشكلة
-    CartDataBase db;
+    AccountDataBase db;
     @Override
     public void onFragmentInteraction(Meals meals) {
-
-        db = new CartDataBase(this);
-        CartMeal cartMeal= new CartMeal(meals.getName_Meal(),2,meals.getPrice(),meals.getImg_meal());
+        db = new AccountDataBase(this);
+        CartMeal cartMeal= new CartMeal(meals.getName_Meal(),meals.getCount(),meals.getPrice(),meals.getImg_meal());
         boolean res = db.insertAccount(cartMeal);
-//        Toast.makeText(getBaseContext(),meals.getName_Meal(),Toast.LENGTH_LONG).show();
-//        Log.i("name",meals.getName_Meal());
-//        Log.i("namemeal",meals.getName_Meal());
-//        Bundle bundle = new Bundle();
-//        bundle.putString("name",meals.getName_Meal());
-//        bundle.putInt("count",2);
-//        bundle.putDouble("price",meals.getPrice());
-//        bundle.putInt("img",meals.getImg_meal());
-//        Toast.makeText(getBaseContext(),meals.getName_Meal(),Toast.LENGTH_LONG).show();
-//        FragmentShoping fragmentShoping =new FragmentShoping();
-//        fragmentShoping.setArguments(bundle);
-//        FragmentShoping fragmentShoping =  FragmentShoping.newInstance(meals.getName_Meal());
-//        FragmentManager fm=getSupportFragmentManager();
-//        //getFragmentManager().findFragmentByTag(getString(R.string.main_tabitem_buy));
-//        FragmentTransaction ft =fm.beginTransaction();
-//        TabLayout.Tab tab = null;
-//        ft.replace(tab.getTabLabelVisibility(),fragmentShoping);
-//        ft.addToBackStack(null);
-//
-//        ft.commit();
     }
 }

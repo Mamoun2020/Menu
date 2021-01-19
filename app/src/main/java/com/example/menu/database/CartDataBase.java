@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class CartDataBase extends SQLiteOpenHelper {
     public static final String DB_NAME="cart";
-    public static final int DB_VERSION=2;
+    public static final int DB_VERSION=3;
     public static final String TABLE_NAME="cartMeal";
     public static final String CART_CLN_NAME="MealName";
     public static final String CART_CLN_COUNT="NumberMeal";
@@ -52,10 +52,10 @@ public class CartDataBase extends SQLiteOpenHelper {
         Cursor cursor=DB.rawQuery("SELECT * FROM "+TABLE_NAME,null);
         if(cursor.moveToFirst()){
             do {
-                String name_meal = cursor.getString(0);
-                int count = cursor.getInt(1);
-                double price = cursor.getDouble(2);
-                int img = cursor.getInt(3);
+                String name_meal = cursor.getString(cursor.getColumnIndex(CART_CLN_NAME));
+                int count = cursor.getInt(cursor.getColumnIndex(CART_CLN_COUNT));
+                double price = cursor.getDouble(cursor.getColumnIndex(CART_CLN_PRICE));
+                int img = cursor.getInt(cursor.getColumnIndex(CART_CLN_IMAGE));
 
                 CartMeal cartMeal =new CartMeal(name_meal,count,price,img);
                 cartMeals.add(cartMeal);
