@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.menu.R;
+import com.example.menu.database.CartMeal;
 
 import java.util.ArrayList;
 
@@ -28,24 +29,17 @@ public class AdapterShoping  extends RecyclerView.Adapter<AdapterShoping.MealsVi
     @NonNull
     @Override
     public MealsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        final LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        final View v = inflater.inflate(R.layout.shop_custom_item, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.shop_custom_item,parent,false);
         final ViewGroup.LayoutParams lp = v.getLayoutParams();
         lp.width = parent.getWidth();
         v.setLayoutParams(lp);
-        MealsViewHolder viewHolder = new MealsViewHolder(v);
-        return viewHolder;
+        return new MealsViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MealsViewHolder holder, int position) {
         ShopingMeals meal = meals.get(position);
-        holder.img_meal.setImageResource(meal.getImg_meal());
-        holder.Name_Meal.setText(meal.getName_Meal());
-        holder.count.setText(meal.
-                getCount()+"");
-        holder.price.setText(meal.getPrice()+"");
-        Context context = holder.itemView.getContext();
+        holder.bind(meal);
     }
 
 
@@ -56,13 +50,21 @@ public class AdapterShoping  extends RecyclerView.Adapter<AdapterShoping.MealsVi
     class MealsViewHolder extends RecyclerView.ViewHolder {
         TextView Name_Meal,price,count;
         ImageView img_meal;
-
+        ShopingMeals meals;
         public MealsViewHolder(@NonNull View itemView) {
             super(itemView);
             img_meal=itemView.findViewById(R.id.item_iv_shopmeal);
             Name_Meal=itemView.findViewById(R.id.item_tv_shopnamemeal);
             count=itemView.findViewById(R.id.item_tv_shopcount);
             price=itemView.findViewById(R.id.item_tv_shopprice);
+        }
+        void bind(ShopingMeals meals){
+            this.meals=meals;
+            img_meal.setImageResource(meals.getImg_meal());
+            Name_Meal.setText(meals.getName_Meal());
+            count.setText(meals.getCount()+"");
+            price.setText(meals.getPrice()+"");
+
         }
     }
 }

@@ -1,10 +1,13 @@
 package com.example.menu.menurestaurante;
 
+import android.view.ViewGroup;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.fragment.app.FragmentTransaction;
 
 import java.util.ArrayList;
 
@@ -33,4 +36,5 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
     public int getCount() {
         return tabs.size();
     }
+
 }

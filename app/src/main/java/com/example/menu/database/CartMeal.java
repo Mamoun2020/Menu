@@ -1,17 +1,18 @@
-package com.example.menu.menurestaurante;
+package com.example.menu.database;
 
-public class ShopingMeals {
+public class CartMeal {
     String name_Meal;
     int count;
     double price;
     int img_meal;
 
-    public ShopingMeals(String name_Meal, int count, double price, int img_meal) {
+    public CartMeal(String name_Meal, int count, double price, int img_meal) {
         this.name_Meal = name_Meal;
         this.count = count;
         this.price = price;
         this.img_meal = img_meal;
     }
+
 
     public String getName_Meal() {
         return name_Meal;

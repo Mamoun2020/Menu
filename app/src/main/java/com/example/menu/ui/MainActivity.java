@@ -5,24 +5,38 @@ package com.example.menu.ui;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
+import android.annotation.SuppressLint;
+import android.app.Fragment;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.ViewGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.menu.R;
+import com.example.menu.database.Account;
+import com.example.menu.database.AccountDataBase;
+import com.example.menu.database.CartDataBase;
+import com.example.menu.database.CartMeal;
 import com.example.menu.menurestaurante.FragmentDrinks;
 import com.example.menu.menurestaurante.FragmentMealsType;
 import com.example.menu.menurestaurante.FragmentShoping;
 import com.example.menu.menurestaurante.ItemTab;
 import com.example.menu.menurestaurante.MainTab;
+import com.example.menu.menurestaurante.Meals;
 import com.example.menu.menurestaurante.PagerAdapter;
+import com.example.menu.menurestaurante.ShopingMeals;
+import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FragmentMealsType.onFragmentClickListener{
     //RecyclerView menu_recycler;
     TabLayout tab_res;
     ViewPager viewPager;
@@ -30,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
     FragmentDrinks fragmentDrinks=new FragmentDrinks();
     FragmentShoping fragmentShoping = new FragmentShoping();
     PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager());
+    ItemTab itemTab;
+    MainTab mainTab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,4 +100,33 @@ public class MainActivity extends AppCompatActivity {
         alert.show();
     }
 
+    //هان صارت المشكلة
+    CartDataBase db;
+    @Override
+    public void onFragmentInteraction(Meals meals) {
+
+        db = new CartDataBase(this);
+        CartMeal cartMeal= new CartMeal(meals.getName_Meal(),2,meals.getPrice(),meals.getImg_meal());
+        boolean res = db.insertAccount(cartMeal);
+//        Toast.makeText(getBaseContext(),meals.getName_Meal(),Toast.LENGTH_LONG).show();
+//        Log.i("name",meals.getName_Meal());
+//        Log.i("namemeal",meals.getName_Meal());
+//        Bundle bundle = new Bundle();
+//        bundle.putString("name",meals.getName_Meal());
+//        bundle.putInt("count",2);
+//        bundle.putDouble("price",meals.getPrice());
+//        bundle.putInt("img",meals.getImg_meal());
+//        Toast.makeText(getBaseContext(),meals.getName_Meal(),Toast.LENGTH_LONG).show();
+//        FragmentShoping fragmentShoping =new FragmentShoping();
+//        fragmentShoping.setArguments(bundle);
+//        FragmentShoping fragmentShoping =  FragmentShoping.newInstance(meals.getName_Meal());
+//        FragmentManager fm=getSupportFragmentManager();
+//        //getFragmentManager().findFragmentByTag(getString(R.string.main_tabitem_buy));
+//        FragmentTransaction ft =fm.beginTransaction();
+//        TabLayout.Tab tab = null;
+//        ft.replace(tab.getTabLabelVisibility(),fragmentShoping);
+//        ft.addToBackStack(null);
+//
+//        ft.commit();
+    }
 }
