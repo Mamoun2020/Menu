@@ -1,5 +1,6 @@
 package com.example.menu.database;
 
+// to add meals object when bought it
 public class CartMeal {
     String name_Meal;
     int count;

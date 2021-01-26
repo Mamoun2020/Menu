@@ -1,5 +1,6 @@
 package com.example.menu.menurestaurante;
 
+// to add meals object in shopping array list
 public class ShopingMeals {
     String name_Meal;
     int count;

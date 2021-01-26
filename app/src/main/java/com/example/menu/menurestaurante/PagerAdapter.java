@@ -10,9 +10,11 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.fragment.app.FragmentTransaction;
 
 import java.util.ArrayList;
-
+// FragmentStatePagerAdapter special to a lot of tabs
 public class PagerAdapter extends FragmentStatePagerAdapter {
+    // to save set of tabs in list , we need to adapter
     ArrayList<MainTab> tabs = new ArrayList<>();
+    // array list element tab
     public PagerAdapter(@NonNull FragmentManager fm) {
         super(fm);
     }

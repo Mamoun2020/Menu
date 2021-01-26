@@ -7,7 +7,7 @@ import java.security.PrivateKey;
 public class MainTab {
   ItemTab itemTab;
   Fragment fragment_tabLayout;
-
+    //to connect item tab with fragment
   public MainTab(ItemTab itemTab, Fragment fragment_tabLayout) {
     this.itemTab = itemTab;
     this.fragment_tabLayout = fragment_tabLayout;

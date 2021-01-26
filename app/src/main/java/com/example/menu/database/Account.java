@@ -1,5 +1,6 @@
 package com.example.menu.database;
 
+// to Create object Account in DB
 public class Account {
     private String name;
     private String phone;

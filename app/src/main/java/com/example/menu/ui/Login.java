@@ -40,6 +40,7 @@ public class Login extends AppCompatActivity {
                 String Name = username.getText().toString();
                 String Password=password.getText().toString();
                 AccountDataBase accountDataBase = new AccountDataBase(getBaseContext());
+                // if user name and password is exist in account table , you can login to main activity
                 boolean isExist = accountDataBase.checkUserExist(Name,Password);
                 if(isExist){
                       Intent intent = new Intent(getBaseContext(), MainActivity.class);
@@ -66,6 +67,7 @@ public class Login extends AppCompatActivity {
 
             }
         });
+        // if click on checked to save your password and user name account
         loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
         loginPrefsEditor = loginPreferences.edit();
         saveLogin = loginPreferences.getBoolean("saveLogin", false);
@@ -77,6 +79,7 @@ public class Login extends AppCompatActivity {
 //                    intent.putExtra("username",Name);
             startActivity(intent);
         }
+        // if you don't have account , click on sign up text view to swap from login to sign up activity
         sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,6 +87,7 @@ public class Login extends AppCompatActivity {
                 startActivity(go_sign_up);
             }
         });
+        // if you forget your password account , click on forget password text view to swap from login to forget activity
         tv_forget.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

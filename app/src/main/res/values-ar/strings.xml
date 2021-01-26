@@ -49,18 +49,24 @@
     <string name="meals_btn_buy">شراء</string>
     <string name="Meals_Name3">بيتزا</string>
     <string name="Meals_component3">تتكون هذه الوجبة من فطيرة البيتزا، الطماطم، كاتشب، زيتون، جبنة، بطاطا وشرائح اللحمة.</string>
-    <string-array name="meals_spinner_count">
-        <item>ادخل الكمية</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-    </string-array>
+    <string name="Meal_Name4">وجبة مشاوي</string>
+    <string name="Meals_component4">تتكون هذه الوجبة من شيش طاووك،كباب و فيليه</string>
+    <string name="Meals_Name5">دجاج بالصوص الحار</string>
+    <string name="Meals_component5">تتكون هذه الوجبة من صدور الدجاج المسحبة مع صلصة الصويا</string>
+    <string name="Meals_Name6">دبوس دجاج مقرمش</string>
+    <string name="Meals_component6">تتكون هذه الوجبة من 10 قطع من دبابيس الدجاج المتبلة</string>
+    <string name="Meals_Name7">كبدة اسكندراني</string>
+    <string name="Meals_component7">تتكون هذه الوجبة من نصف كيلو من الكبدة المقلية</string>
+    <string name="Meals_Name8">تايلندي</string>
+    <string name="Meals_component8">تتكون هذه الوجبة من صدر الجاج مع شرائح البطاطا المقلية، الجبنة الصفراءوالكاتشب</string>
+    <string name="Meals_Name9">دجاج بالكاري</string>
+    <string name="Meals_component9">تتكون هذه الوجبة من فيلية الدجاج المقطعة مكعبات كبيرة</string>
+    <string name="Meals_Name10">شيش طاووك</string>
+    <string name="Meals_component10">تتكون هذه الوجبة من صدور الجاج المتبلة</string>
+    <string name="drink_name1">مشروب غازي</string>
+    <string name="drink_name2">كوكتيل</string>
+    <string name="drink_name3">عصير طبيعي</string>
+    <string name="drink_name4">ميلك شيك نوتيلا</string>
+    <string name="drink_name5">فرابتشينو</string>
 
 </resources>

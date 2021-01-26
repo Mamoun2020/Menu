@@ -48,19 +48,25 @@
     <string name="meals_btn_buy">Buy</string>
     <string name="Meals_Name3">Pizza</string>
     <string name="Meals_component3">This meal consists of pizza pie, tomatoes, ketchup, olives, cheese, potatoes and sliced meat.</string>
-    <string-array name="meals_spinner_count">
-        <item>Enter a count</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-    </string-array>
+    <string name="Meal_Name4">Grilled Meat</string>
+    <string name="Meals_component4">This meal is SheeshTawouk,Kebab and fillet.</string>
+    <string name="Meals_Name5">Hot sauce Chicken</string>
+    <string name="Meals_component5">This meal consists of boneless chicken breast with soy sauce.</string>
+    <string name="Meals_Name6">Crispy Chicken Pin</string>
+    <string name="Meals_component6">This meal consists of 10 pieces of marinated chicken drumstick.</string>
+    <string name="Meals_Name7">Iskandran liver</string>
+    <string name="Meals_component7">This meal consists of half a kilo of fried liver.</string>
+    <string name="Meals_Name8">Thai Sandwich</string>
+    <string name="Meals_component8">This meal consists of chicken breast with french fries, yellow cheese and ketchup.</string>
+    <string name="Meals_Name9">Curry Chicken</string>
+    <string name="Meals_component9">This meal is made of chicken fillet, cut into large cubes.</string>
+    <string name="Meals_Name10">SheeshTawouk</string>
+    <string name="Meals_component10">This meal consists of marinated chicken breast.</string>
+    <string name="drink_name1">Soda</string>
+    <string name="drink_name2">Cocktail</string>
+    <string name="drink_name3">Fresh Juice</string>
+    <string name="drink_name4">Nutella Milkshake</string>
+    <string name="drink_name5">Frapachino</string>
 
 
 </resources>

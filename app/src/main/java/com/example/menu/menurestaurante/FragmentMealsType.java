@@ -51,15 +51,27 @@ public class FragmentMealsType extends Fragment {
                              Bundle savedInstanceState) {
         View v =inflater.inflate(R.layout.fragment_meals_type, container, false);
         RecyclerView recyclerView=v.findViewById(R.id.main_recycler_meals);
+        // add meals object in array list to show it when click on meals tab to show fragment with the custom layout meals
         ArrayList<Meals> meals = new ArrayList<>();
         meals.add(new Meals(getString(R.string.Meals_Name1),getString(R.string.Meals_component1),10,R.drawable.burger_1,1));
         meals.add(new Meals(getString(R.string.Meals_Name2),getString(R.string.Meals_component2),15,R.drawable.shawarma_2,1));
         meals.add(new Meals(getString(R.string.Meals_Name3),getString(R.string.Meals_component3),20,R.drawable.pizza_3,1));
+        meals.add(new Meals(getString(R.string.Meal_Name4),getString(R.string.Meals_component4),29,R.drawable.kebabs_4,1));
+        meals.add(new Meals(getString(R.string.Meals_Name5),getString(R.string.Meals_component5),15,R.drawable.hotchicken_5,1));
+        meals.add(new Meals(getString(R.string.Meals_Name6),getString(R.string.Meals_component6),25,R.drawable.crispypin_6,1));
+        meals.add(new Meals(getString(R.string.Meals_Name7),getString(R.string.Meals_component7),15,R.drawable.iskandranliver_7,1));
+        meals.add(new Meals(getString(R.string.Meals_Name8),getString(R.string.Meals_component8),12,R.drawable.thaisandwich_8,1));
+        meals.add(new Meals(getString(R.string.Meals_Name9),getString(R.string.Meals_component9),14,R.drawable.currychicken_9,1));
+        meals.add(new Meals(getString(R.string.Meals_Name10),getString(R.string.Meals_component10),13,R.drawable.sheeshtawouk_10,1));
+
+
+
 
         AdapterMeals adapterMeals = new AdapterMeals(meals, new OnItemClickListener() {
             @Override
             public void onItemClick(Meals meals) {
-                listener.onFragmentInteraction(meals);
+                // to sent data from fragment to main activity when click on buy button
+                    listener.onFragmentInteraction(meals);
             }
         });
         recyclerView.setRotationY(180);

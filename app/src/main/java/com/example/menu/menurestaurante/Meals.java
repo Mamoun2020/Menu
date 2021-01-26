@@ -1,5 +1,6 @@
 package com.example.menu.menurestaurante;
 
+// to add meals object in meals array list
 public class Meals {
     String Name_Meal;
     String components;

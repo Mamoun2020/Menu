@@ -1,5 +1,6 @@
 package com.example.menu.menurestaurante;
 
+// // to add item tab object in main tap to tab layout
 public class ItemTab {
     private  int id_item;
     private  String name_item;

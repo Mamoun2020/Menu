@@ -37,10 +37,7 @@ public class AdapterMeals extends RecyclerView.Adapter<AdapterMeals.MealsViewHol
         this.listener=listener;
     }
 
-    public AdapterMeals() {
-
-    }
-
+    // created the first time the objects are displayed
     @NonNull
     @Override
     public MealsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -48,15 +45,18 @@ public class AdapterMeals extends RecyclerView.Adapter<AdapterMeals.MealsViewHol
         final ViewGroup.LayoutParams lp = v.getLayoutParams();
         lp.width = parent.getWidth();
         v.setLayoutParams(lp);
+        // it is called once for every object or item that first displays on the screen
         return new MealsViewHolder(v);
 
     }
 
+    // take holder and position ,to get information from meals object to save in holder/ custom item layout
     @Override
     public void onBindViewHolder(@NonNull MealsViewHolder holder, int position) {
         Meals meal = meals.get(position);
         holder.bind(meal);
         double price_meal=holder.meals.getPrice();
+        // to plus value the count of meals when click on +
         holder.plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,6 +74,7 @@ public class AdapterMeals extends RecyclerView.Adapter<AdapterMeals.MealsViewHol
                 meal.setPrice(Price_all);
             }
         });
+        // to minus value the count of meals when click on -
         holder.minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,12 +100,12 @@ public class AdapterMeals extends RecyclerView.Adapter<AdapterMeals.MealsViewHol
 
 
     }
-
+    // return size of array list
     @Override
     public int getItemCount() {
         return meals.size();
     }
-
+      // save pointer object in custom item layout
     class MealsViewHolder extends  RecyclerView.ViewHolder{
         TextView Name_Meal,components,price;
         ImageView img_meal;
@@ -121,10 +122,11 @@ public class AdapterMeals extends RecyclerView.Adapter<AdapterMeals.MealsViewHol
             minus=itemView.findViewById(R.id.item_btn_minus);
             plus=itemView.findViewById(R.id.item_btn_plus);
             et_count=itemView.findViewById(R.id.item_et_count);
+            // get meals object when click on buy to send it to main Activity then save it in DB shopping to show it in Shopping fragment
             btn_tobuy.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    listener.onItemClick(meals);
+                        listener.onItemClick(meals);
                 }
             });
         }

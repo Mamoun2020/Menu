@@ -25,7 +25,7 @@ public class AdapterShoping  extends RecyclerView.Adapter<AdapterShoping.MealsVi
         this.meals = meals;
         this.context=context;
     }
-
+    // created the first time the objects are displayed
     @NonNull
     @Override
     public MealsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -33,20 +33,22 @@ public class AdapterShoping  extends RecyclerView.Adapter<AdapterShoping.MealsVi
         final ViewGroup.LayoutParams lp = v.getLayoutParams();
         lp.width = parent.getWidth();
         v.setLayoutParams(lp);
+        // it is called once for every object or item that first displays on the screen
         return new MealsViewHolder(v);
     }
-
+    // take holder and position ,to get information from shopping object to save in holder/ custom item layout
     @Override
     public void onBindViewHolder(@NonNull MealsViewHolder holder, int position) {
         ShopingMeals meal = meals.get(position);
         holder.bind(meal);
     }
 
-
+    // return size of array list
     @Override
     public int getItemCount() {
         return meals.size();
     }
+    // save pointer object in custom item layout
     class MealsViewHolder extends RecyclerView.ViewHolder {
         TextView Name_Meal,price,count;
         ImageView img_meal;
