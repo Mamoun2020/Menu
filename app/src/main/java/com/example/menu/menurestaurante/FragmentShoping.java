@@ -62,7 +62,7 @@ FragmentShoping extends Fragment {
             img_drinks=cartDrink.getImg_Drink();
             if(list_drink!=null)
                 //add it in shopping meal array list to show it in shopping tab
-                shopingMeals.add(new ShopingMeals(name_drinks, count_drinks, price_drinks, img_drinks));
+               shopingMeals.add(new ShopingMeals(name_drinks, count_drinks, price_drinks, img_drinks));
         }
 
         AdapterShoping adapterShoping=new AdapterShoping(getActivity(),shopingMeals);

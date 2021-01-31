@@ -34,11 +34,12 @@ public class Login extends AppCompatActivity {
         sign_up=findViewById(R.id.login_tv_signup);
         cb_save=findViewById(R.id.login_ch_remember);
         tv_forget=findViewById(R.id.login_tv_forget);
+
+        String Name = username.getText().toString();
+        String Password=password.getText().toString();
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String Name = username.getText().toString();
-                String Password=password.getText().toString();
                 AccountDataBase accountDataBase = new AccountDataBase(getBaseContext());
                 // if user name and password is exist in account table , you can login to main activity
                 boolean isExist = accountDataBase.checkUserExist(Name,Password);
@@ -49,22 +50,21 @@ public class Login extends AppCompatActivity {
                 } else {
                    tv_error.setText(R.string.login_tv_error);
                 }
-                cb_save.setChecked(false);
-                cb_save.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                    @Override
-                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                        if(cb_save.isChecked()) {
-                            loginPrefsEditor.putBoolean("saveLogin", true);
-                            loginPrefsEditor.putString("username", Name);
-                            loginPrefsEditor.putString("password", Password);
-                            loginPrefsEditor.commit();
-                        } else {
-                            loginPrefsEditor.clear();
-                            loginPrefsEditor.commit();
-                        }
-                    }
-                });
-
+//                cb_save.setChecked(false);
+            }
+        });
+        cb_save.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(cb_save.isChecked()) {
+                    loginPrefsEditor.putBoolean("saveLogin", true);
+                    loginPrefsEditor.putString("username", Name);
+                    loginPrefsEditor.putString("password", Password);
+                    loginPrefsEditor.commit();
+                } else {
+                    loginPrefsEditor.clear();
+                    loginPrefsEditor.commit();
+                }
             }
         });
         // if click on checked to save your password and user name account
