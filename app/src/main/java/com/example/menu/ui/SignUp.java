@@ -39,7 +39,7 @@ public class SignUp extends AppCompatActivity {
                 String Password= password.getText().toString();
                 String Address= address.getText().toString();
                 // take data from field to create account in DB
-                if (Name!=(getString(R.string.signup_et_username))&& Password!=(getString(R.string.signup_et_password))) {
+                if (!Name.equals(getString(R.string.signup_et_username)) && !Password.equals(getString(R.string.signup_et_password))) {
                     //add these data to account object to send it into DB , to account table
                     Account account = new Account(Name, Phone, Password, Address);
                     if (account != null) {

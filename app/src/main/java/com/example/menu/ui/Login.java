@@ -60,7 +60,7 @@ public class Login extends AppCompatActivity {
                     loginPrefsEditor.putBoolean("saveLogin", true);
                     loginPrefsEditor.putString("username", Name);
                     loginPrefsEditor.putString("password", Password);
-                    loginPrefsEditor.commit();
+                    loginPrefsEditor.apply();
                 } else {
                     loginPrefsEditor.clear();
                     loginPrefsEditor.commit();

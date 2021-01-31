@@ -33,8 +33,7 @@ public class MainActivity extends AppCompatActivity implements FragmentMealsType
     FragmentDrinks fragmentDrinks=new FragmentDrinks();
     FragmentShoping fragmentShoping = new FragmentShoping();
     PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager());
-    ItemTab itemTab;
-    MainTab mainTab;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
